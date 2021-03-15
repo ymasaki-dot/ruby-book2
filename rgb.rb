@@ -1,34 +1,3 @@
-a = [1,2,3]
- puts a[0]
- puts a[100]
-
-puts a[4] = 50
-puts a
-
-14.divmod(3)
-quo_rem = 14.divmod(3)
-puts "商=#{quo_rem[0]}, 余り=#{quo_rem[1]}"
-
-nm = [1,2,3,4]
-sum = 0
-nm.each do |n|
-   sum += n
-end
-puts sum
-
-nm = [1,2,3,4]
-sum = 0
-nm.each{|n| sum += n}
-puts sum
-
-
-# a = [1,2,3,1,2,3]
-# a.delete_if do |n|
-#   n.odd?
-# end
-
-# puts a
-
 numbers = [1,2,3,4]
 new_numbers = []
 numbers.each{|n| new_numbers << n * 10}
@@ -58,3 +27,29 @@ end
 
 puts charge(1)
 puts charge(13)
+
+
+h = Hash.new {|hash,key| hash[key] = 'hello'}
+h[:foo]
+h[:bar]
+
+puts h
+
+def find_currency(country)
+  currencies = {japan: 'yen', us: 'dollar', india: 'ruppe'}
+  currencies[country]
+end
+
+def show_currency(country)
+  currency = find_currency(country)
+  if currency
+    currency.upcase
+  end
+end
+puts show_currency(:japan)
+puts show_currency(:brazil)
+
+limit = nil
+limit ||= 10
+
+puts limit
